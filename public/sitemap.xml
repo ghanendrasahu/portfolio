@@ -17,6 +17,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ghanendrasahu.netlify.app/github</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ghanendrasahu.netlify.app/education</loc>
     <priority>0.6</priority>
   </url>

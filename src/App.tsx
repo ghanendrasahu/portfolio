@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
+import GitHub from "./pages/GitHub";
 import Education from "./pages/Education";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="experience" element={<Experience />} />
         <Route path="projects" element={<Projects />} />
         <Route path="skills" element={<Skills />} />
+        <Route path="github" element={<GitHub />} />
         <Route path="education" element={<Education />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

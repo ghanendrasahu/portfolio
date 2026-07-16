@@ -6,6 +6,7 @@ const tabs = [
   { name: "Experience", to: "/experience", emoji: "💼", end: false },
   { name: "Projects", to: "/projects", emoji: "🚀", end: false },
   { name: "Skills", to: "/skills", emoji: "⚡", end: false },
+  { name: "GitHub", to: "/github", emoji: "📦", end: false },
   { name: "Education", to: "/education", emoji: "🎓", end: false },
 ];
 

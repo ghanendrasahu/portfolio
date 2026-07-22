@@ -1,5 +1,6 @@
 import { ArrowUpRight, GitBranch } from "lucide-react";
 import projects from "../data/projects";
+import CardTilt from "../components/3d/CardTilt";
 
 export default function Projects() {
   return (
@@ -9,10 +10,10 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {projects.map((project) => (
-          <article
-            key={project.id}
-            className="group relative overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent"
-          >
+          <CardTilt key={project.id}>
+            <article
+              className="group relative h-full overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
+            >
             <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-accent to-accent3 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
             <span className="mb-3.5 block text-[28px]">{project.emoji}</span>
             <h3 className="mb-2.5 font-display text-[16.5px] font-semibold">{project.title}</h3>
@@ -47,6 +48,7 @@ export default function Projects() {
               )}
             </div>
           </article>
+          </CardTilt>
         ))}
       </div>
     </>

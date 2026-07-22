@@ -14,7 +14,7 @@ export default function Experience() {
             </p>
 
             <div className="relative border-l-2 border-border pb-9 pl-6 last:pb-0">
-              <span className="absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-accent ring-4 ring-bg" />
+              <span className="pulse-dot absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-accent ring-4 ring-bg" />
               <h3 className="font-display text-base font-semibold">{exp.role}</h3>
               <p className="mb-3 text-[13.5px] text-accent">
                 {[exp.company, exp.note, exp.location].filter(Boolean).join(" · ")}

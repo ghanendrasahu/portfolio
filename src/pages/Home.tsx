@@ -1,6 +1,9 @@
-﻿import profile from "../data/profile";
+﻿import { lazy, Suspense } from "react";
+import profile from "../data/profile";
 import { coreExpertise } from "../data/skills";
 import type { PillTone } from "../data/skills";
+
+const HeroGlobe = lazy(() => import("../components/3d/HeroGlobe"));
 
 const pillTones: Record<PillTone, string> = {
   blue: "border-accent/30 bg-accent/[0.06] text-accent",
@@ -33,6 +36,9 @@ export default function Home() {
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-bg/75" aria-hidden="true" />
+        <Suspense fallback={null}>
+          <HeroGlobe />
+        </Suspense>
 
         <section className="relative grid grid-cols-1 gap-10 p-5 sm:p-7 lg:grid-cols-[1fr_280px] lg:items-start">
         <div>

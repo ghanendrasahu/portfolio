@@ -101,3 +101,44 @@
 .animate-fadein {
   animation: fadein 0.35s ease both;
 }
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
+
+@keyframes dotpulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(88 166 255 / 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgb(88 166 255 / 0);
+  }
+}
+
+.pulse-dot {
+  animation: dotpulse 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadein,
+  .animate-floaty,
+  .pulse-dot,
+  .animate-pulse {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

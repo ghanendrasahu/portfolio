@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import githubRepos from "../data/github";
+import CardTilt from "../components/3d/CardTilt";
 
 const langColors: Record<string, string> = {
   Python: "bg-accent/10 text-accent",
@@ -26,13 +27,13 @@ export default function GitHub() {
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {githubRepos.map((repo) => (
-          <a
-            key={repo.repo}
-            href={repo.url}
-            target="_blank"
-            rel="noreferrer"
-            className="group relative overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent"
-          >
+          <CardTilt key={repo.repo}>
+            <a
+              href={repo.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative flex h-full flex-col overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
+            >
             <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-accent to-accent3 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
             <div className="mb-2 flex items-start justify-between gap-3">
               <h3 className="font-display text-[15.5px] font-semibold leading-snug">{repo.name}</h3>
@@ -46,7 +47,8 @@ export default function GitHub() {
             <span className="inline-flex items-center gap-1 text-[12.5px] font-medium text-accent group-hover:underline">
               View on GitHub <ArrowUpRight size={13} />
             </span>
-          </a>
+            </a>
+          </CardTilt>
         ))}
       </div>
     </>

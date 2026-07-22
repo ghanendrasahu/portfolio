@@ -25,10 +25,11 @@ export default function Education() {
 
       <p className="section-label mt-8">Certifications</p>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-        {certificates.map((cert) => (
+        {certificates.map((cert, i) => (
           <div
             key={cert.id}
-            className="flex items-center gap-3 rounded-[10px] border border-border bg-surface px-[18px] py-4"
+            className="animate-floaty flex items-center gap-3 rounded-[10px] border border-border bg-surface px-[18px] py-4"
+            style={{ animationDelay: `${i * 0.45}s` }}
           >
             <span className="shrink-0 text-lg">{cert.emoji}</span>
             <p className="text-[13.5px] font-medium leading-snug text-tsecondary">{cert.name}</p>

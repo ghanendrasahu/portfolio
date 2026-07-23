@@ -21,20 +21,7 @@ const contactItems = [
 export default function Home() {
   return (
     <>
-      <div className="relative overflow-hidden rounded-[10px]">
-        <video
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          src="/hero-bg.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-bg/75" aria-hidden="true" />
-
-        <section className="relative grid grid-cols-1 gap-10 p-5 sm:p-7 lg:grid-cols-[1fr_280px] lg:items-start">
+      <section className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_280px] lg:items-start">
         <div>
           <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-accent2/25 bg-accent2/[0.08] px-3 py-1 text-xs font-medium text-accent2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent2" />
@@ -92,7 +79,6 @@ export default function Home() {
           </ul>
         </aside>
       </section>
-      </div>
 
       <section className="mt-11">
         <p className="section-label">Core Expertise</p>

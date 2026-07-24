@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </div>
 
-        <aside className="rounded-[10px] border border-border bg-surface p-6">
+        <aside className="rounded-[10px] border border-border/50 bg-transparent p-6">
           <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-tsecondary">
             Contact
           </h3>

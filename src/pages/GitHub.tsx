@@ -34,7 +34,15 @@ export default function GitHub() {
               rel="noreferrer"
               className="group relative flex h-full flex-col overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
             >
-            <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-accent to-accent3 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+              <img
+                src="/bg-github.jpg"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-30"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-bg/70" aria-hidden="true" />
+              <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-accent to-accent3 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+              <div className="relative">
             <div className="mb-2 flex items-start justify-between gap-3">
               <h3 className="font-display text-[15.5px] font-semibold leading-snug">{repo.name}</h3>
               <span
@@ -47,6 +55,7 @@ export default function GitHub() {
             <span className="inline-flex items-center gap-1 text-[12.5px] font-medium text-accent group-hover:underline">
               View on GitHub <ArrowUpRight size={13} />
             </span>
+              </div>
             </a>
           </CardTilt>
         ))}

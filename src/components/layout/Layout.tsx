@@ -19,8 +19,9 @@ export default function Layout() {
 
   return (
     <div className="relative flex min-h-screen flex-col bg-bg text-tprimary">
-      {!reducedMotion && (
-        <div className="fixed inset-0 z-0" aria-hidden="true">
+      <div className="pointer-events-none fixed inset-0 z-0 bg-bg/55" aria-hidden="true" />
+      {pathname !== "/" && !reducedMotion && (
+        <div className="fixed inset-0 z-[1]" aria-hidden="true">
           <Suspense fallback={null}>
             <Scene3D route={pathname} />
           </Suspense>

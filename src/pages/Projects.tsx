@@ -14,7 +14,15 @@ export default function Projects() {
             <article
               className="group relative h-full overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
             >
-            <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-accent to-accent3 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+              <img
+                src="/bg-projects.jpg"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-30"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-bg/70" aria-hidden="true" />
+              <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-accent to-accent3 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+              <div className="relative">
             <span className="mb-3.5 block text-[28px]">{project.emoji}</span>
             <h3 className="mb-2.5 font-display text-[16.5px] font-semibold">{project.title}</h3>
             <p className="mb-4 text-[13.5px] leading-relaxed text-tsecondary">{project.description}</p>
@@ -47,6 +55,7 @@ export default function Projects() {
                 </a>
               )}
             </div>
+              </div>
           </article>
           </CardTilt>
         ))}

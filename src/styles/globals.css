@@ -25,6 +25,10 @@
 
   body {
     @apply bg-bg font-sans text-tprimary antialiased;
+    background-image: url("/bg-site.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-size: 15px;
     line-height: 1.6;
   }

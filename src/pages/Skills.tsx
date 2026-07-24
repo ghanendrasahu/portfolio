@@ -16,7 +16,15 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {skillGroups.map((group) => (
-          <section key={group.id} className="rounded-[10px] border border-border bg-surface p-[22px]">
+          <section key={group.id} className="relative overflow-hidden rounded-[10px] border border-border bg-surface p-[22px]">
+            <img
+              src="/bg-skills.jpg"
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-bg/75" aria-hidden="true" />
+            <div className="relative">
             <h3
               className={`mb-3.5 border-b border-border pb-2.5 font-display text-[13px] font-semibold uppercase tracking-wider ${titleColors[group.color]}`}
             >
@@ -28,6 +36,7 @@ export default function Skills() {
                   {skill}
                 </span>
               ))}
+            </div>
             </div>
           </section>
         ))}

@@ -17,9 +17,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-md">
       <div className="mx-auto max-w-[1000px] px-5 pt-6 sm:px-7 sm:pt-7">
         <div className="mb-4 flex items-center gap-4 sm:mb-5">
-          <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent3 font-display text-xl font-bold text-bg">
-            {profile.initials}
-          </div>
+          <img
+            src="/images/avatar-128.jpg"
+            alt="Ghanendra Sahu"
+            width={52}
+            height={52}
+            className="h-[52px] w-[52px] shrink-0 rounded-full border border-border object-cover"
+          />
           <div>
             <h1 className="font-display text-xl font-bold tracking-tight sm:text-[22px]">{profile.fullName}</h1>
             <p className="mt-0.5 flex items-center gap-1.5 text-[13px] text-tsecondary">

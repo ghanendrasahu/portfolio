@@ -1,0 +1,14 @@
+# Render blueprint for portfolio.
+# Mirrors the live service configuration; inert until an explicit Blueprint Sync.
+# Secret values are declared with sync:false and stay in the Render dashboard.
+services:
+- type: web
+  name: ghanendra-portfolio
+  runtime: static
+  branch: main
+  buildCommand: npm ci && npm run build
+  staticPublishPath: dist
+  autoDeploy: true
+  envVars:
+  - key: NODE_VERSION
+    value: '22'

@@ -1,4 +1,4 @@
-# Ghanendra Sahu — Portfolio
+# Ghanendra Sahu â€” Portfolio
 
 Personal portfolio website for **Ghanendra Sahu**, Data Scientist & GenAI Engineer.
 
@@ -29,11 +29,11 @@ above, so this portfolio lists only work that is current.
 
 ## Sections
 
-- **Home** — intro, contact card, core expertise
-- **Experience** — ML/AI engineering roles timeline
-- **Projects** — production-grade ML, RAG, and classification pipelines with GitHub links
-- **Skills** — categorized stack across ML, GenAI, MLOps, and Cloud/BI
-- **Education** — academics and certifications
+- **Home** â€” intro, contact card, core expertise
+- **Experience** â€” ML/AI engineering roles timeline
+- **Projects** â€” production-grade ML, RAG, and classification pipelines with GitHub links
+- **Skills** â€” categorized stack across ML, GenAI, MLOps, and Cloud/BI
+- **Education** â€” academics and certifications
 
 ## Getting Started
 

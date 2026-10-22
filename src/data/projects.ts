@@ -1,4 +1,4 @@
-﻿export interface Project {
+export interface Project {
   id: number;
   emoji: string;
   title: string;
@@ -10,6 +10,14 @@
 
 export const projects: Project[] = [
   {
+    id: 13,
+    emoji: "U+1F98A",
+    title: "Kitsunecart - Autonomous Listing Platform",
+    description:
+      "Product photo plus rough specs become a marketplace-ready listing: image attribute extraction, competitor research, a defensible price band, multilingual copy (English, Hindi, regional), a validation gate and a reviewable publish step. Ports and adapters, SQLite with migrations, idempotency and a full audit trail.",
+    tags: ["FastAPI", "LLM", "Vision", "E-commerce", "Multilingual", "Audit Trail"],
+    github: "https://github.com/ghanendrasahu/kitsunecart",
+  },  {
     id: 8,
     emoji: "🎯",
     title: "JobHunter AI",

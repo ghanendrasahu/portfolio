@@ -1,4 +1,6 @@
-﻿import profile from "../data/profile";
+﻿import { FileText, Mail, MapPin, Phone } from "lucide-react";
+import profile from "../data/profile";
+import { GithubIcon, LinkedinIcon } from "../components/icons/Brand";
 import { coreExpertise } from "../data/skills";
 import type { PillTone } from "../data/skills";
 
@@ -6,22 +8,22 @@ const pillTones: Record<PillTone, string> = {
   blue: "border-accent/30 bg-accent/[0.06] text-accent",
   green: "border-accent2/30 bg-accent2/[0.06] text-accent2",
   purple: "border-accent3/30 bg-accent3/[0.06] text-accent3",
-  orange: "border-[#f78166]/30 bg-[#f78166]/[0.06] text-[#f78166]",
+  orange: "border-warning/30 bg-warning/[0.06] text-warning",
   default: "border-tagborder bg-tagbg text-tsecondary",
 };
 
 const contactItems = [
-  { icon: "📍", label: profile.location },
-  { icon: "📞", label: profile.phone, href: profile.phoneHref },
-  { icon: "✉️", label: profile.email, href: profile.social.email },
-  { icon: "💼", label: "linkedin.com/in/ghanendrasahu", href: profile.social.linkedin },
-  { icon: "⌥", label: "github.com/ghanendrasahu", href: profile.social.github },
+  { Icon: MapPin, label: profile.location },
+  { Icon: Phone, label: profile.phone, href: profile.phoneHref },
+  { Icon: Mail, label: profile.email, href: profile.social.email },
+  { Icon: LinkedinIcon, label: "linkedin.com/in/ghanendrasahu", href: profile.social.linkedin },
+  { Icon: GithubIcon, label: "github.com/ghanendrasahu", href: profile.social.github },
 ];
 
 export default function Home() {
   return (
     <>
-      <div className="relative overflow-hidden rounded-[10px]">
+      <div className="relative overflow-hidden rounded-xl">
         <video
           className="pointer-events-none absolute inset-0 h-full w-full object-cover"
           src="/hero-bg.mp4"
@@ -53,28 +55,28 @@ export default function Home() {
 
           <div className="mt-7 flex flex-wrap gap-3">
             <a href={profile.social.email} className="btn-primary">
-              ✉️ Get in Touch
+              <Mail size={15} strokeWidth={2} aria-hidden="true" /> Get in Touch
             </a>
             <a href={profile.social.github} target="_blank" rel="noreferrer" className="btn-ghost">
-              ⌥ GitHub
+              <GithubIcon size={15} aria-hidden="true" /> GitHub
             </a>
             <a href={profile.social.linkedin} target="_blank" rel="noreferrer" className="btn-ghost">
-              in LinkedIn
+              <LinkedinIcon size={15} aria-hidden="true" /> LinkedIn
             </a>
             <a href={profile.resume} target="_blank" rel="noreferrer" className="btn-ghost">
-              📄 Resume
+              <FileText size={15} strokeWidth={2} aria-hidden="true" /> Resume
             </a>
           </div>
         </div>
 
-        <aside className="rounded-[10px] border border-border/50 bg-transparent p-6">
+        <aside className="rounded-xl border border-border/50 bg-transparent p-6">
           <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-tsecondary">
             Contact
           </h3>
           <ul>
             {contactItems.map((item) => (
               <li key={item.label} className="flex items-center gap-2.5 border-b border-border py-2 text-[13.5px] text-tsecondary last:border-none">
-                <span className="w-5 shrink-0 text-center text-[15px]">{item.icon}</span>
+                <span className="flex w-5 shrink-0 justify-center text-accent"><item.Icon size={15} strokeWidth={1.8} aria-hidden="true" /></span>
                 {item.href ? (
                   <a
                     href={item.href}

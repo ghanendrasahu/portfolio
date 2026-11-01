@@ -9,7 +9,7 @@ export default function Education() {
 
       <div>
         {education.map((item) => (
-          <div key={item.id} className="relative mb-4 overflow-hidden rounded-[10px] border border-border bg-surface p-6">
+          <div key={item.id} className="relative mb-4 overflow-hidden rounded-xl border border-border bg-surface p-6">
             <img
               src="/bg-education.jpg"
               alt=""
@@ -18,7 +18,7 @@ export default function Education() {
             />
             <div className="pointer-events-none absolute inset-0 bg-bg/75" aria-hidden="true" />
             <div className="relative flex items-start gap-[18px]">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[10px] bg-surface2 text-[26px]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-surface2 text-[26px]">
               {item.emoji}
             </div>
             <div>
@@ -37,7 +37,7 @@ export default function Education() {
         {certificates.map((cert, i) => (
           <div
             key={cert.id}
-            className="animate-floaty relative overflow-hidden rounded-[10px] border border-border bg-surface px-[18px] py-4"
+            className="animate-floaty relative overflow-hidden rounded-xl border border-border bg-surface px-[18px] py-4"
             style={{ animationDelay: `${i * 0.45}s` }}
           >
             <img

@@ -15,7 +15,7 @@ export default function Experience() {
 
             <div className="relative border-l-2 border-border pb-9 pl-6 last:pb-0">
               <span className="pulse-dot absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-accent ring-4 ring-bg" />
-              <div className="relative overflow-hidden rounded-[10px] border border-border bg-surface p-5">
+              <div className="relative overflow-hidden rounded-xl border border-border bg-surface p-5">
                 <img
                   src="/bg-experience.jpg"
                   alt=""

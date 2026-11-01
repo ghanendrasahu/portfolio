@@ -5,8 +5,8 @@ import CardTilt from "../components/3d/CardTilt";
 const langColors: Record<string, string> = {
   Python: "bg-accent/10 text-accent",
   TypeScript: "bg-accent3/10 text-accent3",
-  "Jupyter Notebook": "bg-[#f78166]/10 text-[#f78166]",
-  JavaScript: "bg-yellow-500/10 text-yellow-400",
+  "Jupyter Notebook": "bg-warning/10 text-warning",
+  JavaScript: "bg-warning/10 text-warning",
 };
 
 export default function GitHub() {
@@ -32,7 +32,7 @@ export default function GitHub() {
               href={repo.url}
               target="_blank"
               rel="noreferrer"
-              className="group relative flex h-full flex-col overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
+              className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
             >
               <img
                 src="/bg-github.jpg"

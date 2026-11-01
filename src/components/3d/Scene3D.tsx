@@ -38,7 +38,7 @@ function ParticleField({ count }: { count: number }) {
       </bufferGeometry>
       <pointsMaterial
         size={0.04}
-        color="#58a6ff"
+        color="#8b93ff"
         transparent
         opacity={0.5}
         sizeAttenuation
@@ -118,7 +118,7 @@ function Constellation() {
         </bufferGeometry>
         <pointsMaterial
           size={0.09}
-          color="#bc8cff"
+          color="#b9a0ff"
           transparent
           opacity={0.7}
           sizeAttenuation
@@ -129,7 +129,7 @@ function Constellation() {
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[linePositions, 3]} />
         </bufferGeometry>
-        <lineBasicMaterial color="#58a6ff" transparent opacity={0.14} depthWrite={false} />
+        <lineBasicMaterial color="#8b93ff" transparent opacity={0.14} depthWrite={false} />
       </lineSegments>
     </group>
   );
@@ -143,19 +143,19 @@ function RouteGeometries({ route }: { route: string }) {
           <FloatGroup position={[-5.2, 1.2, -3]} speed={0.9}>
             <mesh>
               <octahedronGeometry args={[0.85, 0]} />
-              <meshBasicMaterial wireframe color="#58a6ff" transparent opacity={0.28} />
+              <meshBasicMaterial wireframe color="#8b93ff" transparent opacity={0.28} />
             </mesh>
           </FloatGroup>
           <FloatGroup position={[-4.2, -2.2, -5]} speed={1.3} amp={0.55}>
             <mesh>
               <torusGeometry args={[0.65, 0.18, 12, 32]} />
-              <meshBasicMaterial wireframe color="#bc8cff" transparent opacity={0.24} />
+              <meshBasicMaterial wireframe color="#b9a0ff" transparent opacity={0.24} />
             </mesh>
           </FloatGroup>
           <FloatGroup position={[5.4, -1.4, -4]} speed={0.7} amp={0.5}>
             <mesh>
               <octahedronGeometry args={[0.6, 0]} />
-              <meshBasicMaterial wireframe color="#3fb950" transparent opacity={0.26} />
+              <meshBasicMaterial wireframe color="#46d39a" transparent opacity={0.26} />
             </mesh>
           </FloatGroup>
         </>
@@ -166,19 +166,19 @@ function RouteGeometries({ route }: { route: string }) {
           <FloatGroup position={[5.6, 1.8, -4]} speed={0.5} amp={0.45}>
             <mesh rotation={[0.5, 0.3, 0]}>
               <torusKnotGeometry args={[0.75, 0.22, 90, 12]} />
-              <meshBasicMaterial wireframe color="#58a6ff" transparent opacity={0.22} />
+              <meshBasicMaterial wireframe color="#8b93ff" transparent opacity={0.22} />
             </mesh>
           </FloatGroup>
           <FloatGroup position={[-5.4, -1.8, -4]} speed={1.1}>
             <mesh>
               <boxGeometry args={[0.9, 0.9, 0.9]} />
-              <meshBasicMaterial wireframe color="#bc8cff" transparent opacity={0.25} />
+              <meshBasicMaterial wireframe color="#b9a0ff" transparent opacity={0.25} />
             </mesh>
           </FloatGroup>
           <FloatGroup position={[-4.4, 2.2, -6]} speed={0.8}>
             <mesh>
               <octahedronGeometry args={[0.55, 0]} />
-              <meshBasicMaterial wireframe color="#3fb950" transparent opacity={0.24} />
+              <meshBasicMaterial wireframe color="#46d39a" transparent opacity={0.24} />
             </mesh>
           </FloatGroup>
         </>
@@ -190,11 +190,11 @@ function RouteGeometries({ route }: { route: string }) {
         <>
           {(
             [
-              [-5.2, 1.6, -4, "#58a6ff"],
-              [-4, -1.8, -5, "#3fb950"],
-              [5.4, 2, -5, "#bc8cff"],
-              [4.6, -1.6, -3, "#f78166"],
-              [0.5, -3.2, -6, "#58a6ff"],
+              [-5.2, 1.6, -4, "#8b93ff"],
+              [-4, -1.8, -5, "#46d39a"],
+              [5.4, 2, -5, "#b9a0ff"],
+              [4.6, -1.6, -3, "#f2b544"],
+              [0.5, -3.2, -6, "#8b93ff"],
             ] as const
           ).map(([x, y, z, color], i) => (
             <FloatGroup key={i} position={[x, y, z]} speed={0.6 + i * 0.18} amp={0.5}>
@@ -212,13 +212,13 @@ function RouteGeometries({ route }: { route: string }) {
           <FloatGroup position={[-5.6, 0.6, -5]} speed={0.45} amp={0.35}>
             <mesh>
               <icosahedronGeometry args={[1.15, 0]} />
-              <meshBasicMaterial wireframe color="#bc8cff" transparent opacity={0.24} />
+              <meshBasicMaterial wireframe color="#b9a0ff" transparent opacity={0.24} />
             </mesh>
           </FloatGroup>
           <FloatGroup position={[5.6, -1.6, -4]} speed={0.9}>
             <mesh>
               <icosahedronGeometry args={[0.6, 0]} />
-              <meshBasicMaterial wireframe color="#58a6ff" transparent opacity={0.26} />
+              <meshBasicMaterial wireframe color="#8b93ff" transparent opacity={0.26} />
             </mesh>
           </FloatGroup>
         </>
@@ -231,7 +231,7 @@ function RouteGeometries({ route }: { route: string }) {
 function SceneContent({ route, mobile }: { route: string; mobile: boolean }) {
   return (
     <>
-      <fog attach="fog" args={["#0d1117", 10, 26]} />
+      <fog attach="fog" args={["#0b0d12", 10, 26]} />
       <ParticleField count={mobile ? 110 : 300} />
       <RouteGeometries route={route} />
     </>

@@ -5,7 +5,7 @@ const titleColors: Record<SkillColor, string> = {
   blue: "text-accent",
   green: "text-accent2",
   purple: "text-accent3",
-  orange: "text-[#f78166]",
+  orange: "text-warning",
 };
 
 export default function Skills() {
@@ -16,7 +16,7 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {skillGroups.map((group) => (
-          <section key={group.id} className="relative overflow-hidden rounded-[10px] border border-border bg-surface p-[22px]">
+          <section key={group.id} className="relative overflow-hidden rounded-xl border border-border bg-surface p-[22px]">
             <img
               src="/bg-skills.jpg"
               alt=""

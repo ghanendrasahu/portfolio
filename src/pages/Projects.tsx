@@ -12,7 +12,7 @@ export default function Projects() {
         {projects.map((project) => (
           <CardTilt key={project.id}>
             <article
-              className="group relative h-full overflow-hidden rounded-[10px] border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
+              className="group relative h-full overflow-hidden rounded-xl border border-border bg-surface p-6 transition-colors duration-200 hover:border-accent"
             >
               <img
                 src="/bg-projects.jpg"

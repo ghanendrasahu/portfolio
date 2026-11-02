@@ -37,6 +37,7 @@ export const projects: Project[] = [
       "Eight-service FastAPI platform with a gateway, Helm charts, ArgoCD canaries and Terraform. The portfolio's deepest deployment story: bandit SAST, Trivy scanning, Alembic migrations and an explicit CORS allowlist behind a Redis-backed rate limiter.",
     tags: ["Kubernetes", "Helm", "ArgoCD", "Terraform", "FastAPI", "Microservices"],
     github: "https://github.com/ghanendrasahu/onepiece",
+    demo: "https://onepiece-identity.onrender.com/docs",
   },
   {
     id: 10,
@@ -46,6 +47,7 @@ export const projects: Project[] = [
       "Async FastAPI service for meeting intelligence on SQLAlchemy 2.0 + Alembic, with Celery/Redis dead-lettering. Strict pyright, a 3.11/3.12 matrix, an Alembic drift check and a 78% coverage gate on an 83% codebase.",
     tags: ["Python", "FastAPI", "SQLAlchemy", "Celery", "LangGraph", "Docker"],
     github: "https://github.com/ghanendrasahu/v-call",
+    demo: "https://v-call-mpy2.onrender.com/docs",
   },
   {
     id: 11,

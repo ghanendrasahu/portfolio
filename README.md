@@ -2,7 +2,7 @@
 
 Personal portfolio website for **Ghanendra Sahu**, Data Scientist & GenAI Engineer.
 
-Live: [ghanendrasahu.netlify.app](https://ghanendrasahu.netlify.app)
+Live: [ghanendra-portfolio.onrender.com](https://ghanendra-portfolio.onrender.com)
 
 ## Tech Stack
 

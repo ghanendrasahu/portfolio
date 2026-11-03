@@ -54,7 +54,7 @@ export const projects: Project[] = [
     emoji: "🥷",
     title: "Kage - AI Outreach Platform",
     description:
-      "Multi-tenant B2B outreach copilot: seven AI agents research companies, score buying signals and draft personalized email/LinkedIn outreach - but never auto-send. Next.js 15 + Drizzle on PostgreSQL, BullMQ/Redis queues, Google OAuth, Stripe billing and a full audit trail.",
+      "Multi-tenant B2B outreach copilot: seven AI agents research companies, score buying signals and draft personalized email/LinkedIn outreach - but never auto-send. Next.js 15 + Drizzle on PostgreSQL, BullMQ/Redis queues, Stripe billing and a full audit trail. Live demo login: admin@kage.dev / Admin123!",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "AI Agents", "SaaS"],
     github: "https://github.com/ghanendrasahu/kage",
     demo: "https://kage-f9sc.onrender.com",

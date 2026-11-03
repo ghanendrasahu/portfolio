@@ -17,7 +17,6 @@ export const projects: Project[] = [
       "Product photo plus rough specs become a marketplace-ready listing: image attribute extraction, competitor research, a defensible price band, multilingual copy (English, Hindi, regional), a validation gate and a reviewable publish step. Ports and adapters, SQLite with migrations, idempotency and a full audit trail.",
     tags: ["FastAPI", "LLM", "Vision", "E-commerce", "Multilingual", "Audit Trail"],
     github: "https://github.com/ghanendrasahu/kitsunecart",
-    demo: "https://kitsunecart.onrender.com/docs",
   },
   {
     id: 8,
@@ -37,7 +36,6 @@ export const projects: Project[] = [
       "Eight-service FastAPI platform with a gateway, Helm charts, ArgoCD canaries and Terraform. The portfolio's deepest deployment story: bandit SAST, Trivy scanning, Alembic migrations and an explicit CORS allowlist behind a Redis-backed rate limiter.",
     tags: ["Kubernetes", "Helm", "ArgoCD", "Terraform", "FastAPI", "Microservices"],
     github: "https://github.com/ghanendrasahu/onepiece",
-    demo: "https://onepiece-identity.onrender.com/docs",
   },
   {
     id: 10,
@@ -47,7 +45,6 @@ export const projects: Project[] = [
       "Async FastAPI service for meeting intelligence on SQLAlchemy 2.0 + Alembic, with Celery/Redis dead-lettering. Strict pyright, a 3.11/3.12 matrix, an Alembic drift check and a 78% coverage gate on an 83% codebase.",
     tags: ["Python", "FastAPI", "SQLAlchemy", "Celery", "LangGraph", "Docker"],
     github: "https://github.com/ghanendrasahu/v-call",
-    demo: "https://v-call-mpy2.onrender.com/docs",
   },
   {
     id: 23,
@@ -67,7 +64,6 @@ export const projects: Project[] = [
       "Telemetry to maintenance decision: a seeded simulator with degradation physics feeds rolling-window features, an IsolationForest anomaly detector, a calibrated failure model and an RUL regressor. Reports failure probability, days remaining and the sensors driving them.",
     tags: ["Machine Learning", "Time Series", "Anomaly Detection", "RUL", "FastAPI"],
     github: "https://github.com/ghanendrasahu/industrial-predictive-maintenance",
-    demo: "https://industrial-predictive-maintenance-we44.onrender.com/docs",
   },
   {
     id: 12,
@@ -77,7 +73,6 @@ export const projects: Project[] = [
       "YouTube-automation pipeline: download, transcribe, detect clips, write the content pack with an LLM, render 9:16, burn captions and publish. LangGraph orchestration with conditional stages, real resumable YouTube uploads, a thumbnail studio and a dark-mode dashboard.",
     tags: ["LangGraph", "FFmpeg", "Whisper", "YouTube API", "Streamlit", "FastAPI"],
     github: "https://github.com/ghanendrasahu/ai-content-factory",
-    demo: "https://ai-content-factory-k9cv.onrender.com",
   },
   {
     id: 1,
@@ -116,7 +111,6 @@ export const projects: Project[] = [
       "FastAPI-based PDF RAG backend using ChromaDB embeddings and Groq-powered answer generation. Exposes dedicated ingest/query endpoints with structured logging for production observability — a deployable document-intelligence service rather than a script.",
     tags: ["Python", "FastAPI", "ChromaDB", "Embeddings", "Groq", "REST API"],
     github: "https://github.com/ghanendrasahu/RAG_ASSISTANT_API",
-    demo: "https://rag-assistant-api-393o.onrender.com/docs",
   },
   {
     id: 5,
@@ -155,17 +149,15 @@ export const projects: Project[] = [
       "RAG QA platform with a built-in evaluation suite: PDF question answering alongside APIs that grade retrieval and answer quality across RAG configurations, so pipeline changes are measured, not guessed.",
     tags: ["FastAPI", "RAG", "Evaluation", "ChromaDB", "Groq"],
     github: "https://github.com/ghanendrasahu/rag-eval-platform",
-    demo: "https://rag-eval-platform.onrender.com/docs",
   },
   {
     id: 16,
     emoji: "🛡️",
     title: "Fraud Detection Engine",
     description:
-      "Real-time transaction fraud scoring: imbalanced-learning-aware training of XGBoost/LightGBM/CatBoost ensembles exported to ONNX for fast inference, exposed through FastAPI health and prediction endpoints.",
+      "Real-time transaction fraud scoring: imbalanced-learning-aware training of XGBoost/LightGBM/CatBoost ensembles exported to ONNX for fast inference, exposed through FastAPI prediction endpoints.",
     tags: ["XGBoost", "LightGBM", "CatBoost", "ONNX", "FastAPI"],
     github: "https://github.com/ghanendrasahu/fraud-detection-engine",
-    demo: "https://fraud-detection-engine-s5k7.onrender.com/docs",
   },
   {
     id: 17,
@@ -192,10 +184,9 @@ export const projects: Project[] = [
     emoji: "⚖️",
     title: "LegalLens India",
     description:
-      "AI contract literacy for startups, freelancers, employees, landlords/tenants and small businesses. The phase-1 API is live, with the PostgreSQL/Redis phase-2 build-out next.",
+      "AI contract literacy for startups, freelancers, employees, landlords/tenants and small businesses, built API-first with PostgreSQL/Redis persistence.",
     tags: ["FastAPI", "LegalTech", "AI", "API-First"],
     github: "https://github.com/ghanendrasahu/sharingan",
-    demo: "https://legal-lens-india.onrender.com/docs",
   },
   {
     id: 20,

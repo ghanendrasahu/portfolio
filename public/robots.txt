@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ghanendrasahu.netlify.app/sitemap.xml
+Sitemap: https://ghanendra-portfolio.onrender.com/sitemap.xml

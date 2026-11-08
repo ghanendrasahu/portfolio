@@ -1,16 +1,7 @@
 ﻿import { FileText, Mail, MapPin, Phone } from "lucide-react";
 import profile from "../data/profile";
 import { GithubIcon, LinkedinIcon } from "../components/icons/Brand";
-import { coreExpertise } from "../data/skills";
-import type { PillTone } from "../data/skills";
-
-const pillTones: Record<PillTone, string> = {
-  blue: "border-accent/30 bg-accent/[0.06] text-accent",
-  green: "border-accent2/30 bg-accent2/[0.06] text-accent2",
-  purple: "border-accent3/30 bg-accent3/[0.06] text-accent3",
-  orange: "border-warning/30 bg-warning/[0.06] text-warning",
-  default: "border-tagborder bg-tagbg text-tsecondary",
-};
+import RoleRotator from "../components/ui/RoleRotator";
 
 const contactItems = [
   { Icon: MapPin, label: profile.location },
@@ -31,10 +22,10 @@ export default function Home() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-bg/75" aria-hidden="true" />
+        <div className="absolute inset-0 bg-bg/80" aria-hidden="true" />
 
         <section className="relative grid grid-cols-1 gap-10 p-5 sm:p-7 lg:grid-cols-[1fr_280px] lg:items-start">
         <div>
@@ -43,13 +34,14 @@ export default function Home() {
             {profile.availabilityBadge}
           </div>
 
-          <h2 className="font-display text-[28px] font-bold leading-[1.2] tracking-tight sm:text-[38px]">
-            Data Scientist &
-            <br />
-            <span className="text-accent">GenAI Engineer</span>
+          <h2
+            aria-label="Data Scientist and AI/ML Engineer"
+            className="font-display text-[28px] font-bold leading-[1.15] tracking-tight sm:text-[40px]"
+          >
+            <RoleRotator />
           </h2>
 
-          <p className="mt-4 max-w-[540px] text-[15.5px] leading-relaxed text-tsecondary">
+          <p className="mt-4 max-w-[540px] text-[15.5px] leading-relaxed text-tsecondary text-pretty">
             {profile.heroDescription}
           </p>
 
@@ -69,7 +61,7 @@ export default function Home() {
           </div>
         </div>
 
-        <aside className="rounded-xl border border-border/50 bg-transparent p-6">
+        <aside className="rounded-xl border border-border/50 bg-bg/60 p-6 backdrop-blur-sm">
           <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-tsecondary">
             Contact
           </h3>
@@ -95,17 +87,6 @@ export default function Home() {
         </aside>
       </section>
       </div>
-
-      <section className="mt-11">
-        <p className="section-label">Core Expertise</p>
-        <div className="flex flex-wrap gap-2">
-          {coreExpertise.map((pill) => (
-            <span key={pill.label} className={`pill ${pillTones[pill.tone]}`}>
-              {pill.label}
-            </span>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

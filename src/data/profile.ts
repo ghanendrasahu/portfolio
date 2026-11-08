@@ -10,7 +10,7 @@
   availabilityBadge: "Available for full-time roles",
 
   heroDescription:
-    "Building end-to-end ML pipelines, RAG systems, and agentic AI applications. Focused on production-ready data products — from model training to containerized API deployment.",
+    "I'm an AI/ML and Data Science enthusiast building intelligent, scalable, and production-ready AI applications. My interests span Machine Learning, Generative AI, LLMs, RAG systems, and Agentic AI — and I enjoy working across the AI development lifecycle, from data preparation and model development to API integration, automation, and deployment.",
 
   location: "Bengaluru, India",
   email: "ghanendra2911@gmail.com",

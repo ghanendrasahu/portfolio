@@ -13,6 +13,21 @@
 export const experiences: Experience[] = [
   {
     id: 1,
+    role: "Robotics Data Collection & Annotation Specialist",
+    company: "Cogito Tech",
+    note: "Full-time · On-site · Client project: Skild AI",
+    location: "Bengaluru",
+    startDate: "Sep 2026",
+    endDate: "Present",
+    current: true,
+    bullets: [
+      "Perform structured data labeling and annotation for robotics, AI, and ML development workflows, meeting project specifications and technical requirements.",
+      "Review annotated datasets to identify labeling errors, incomplete records, and inconsistencies, protecting dataset accuracy and reliability.",
+      "Organize, preprocess, and manage structured datasets for downstream AI/ML development, following annotation guidelines, validation procedures, and quality protocols within project timelines.",
+    ],
+  },
+  {
+    id: 2,
     role: "Data Science with AI Apprentice",
     company: "BDreamz Global Solutions Pvt. Ltd.",
     note: "via Besant Technologies",
@@ -26,7 +41,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     role: "Data Science Intern",
     company: "Prinston Smart Engineers",
     location: "Bengaluru",

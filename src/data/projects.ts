@@ -91,7 +91,7 @@ export const projects: Project[] = [
     description:
       "End-to-end ML inference pipeline on a 7,043-row Telco dataset (23.1% churn rate). Engineered domain features — tenure group, charge-per-service, contract flag — achieving 87%+ accuracy with Random Forest optimized via ROC-AUC and F1-Score. Containerized FastAPI endpoint for real-time churn probability serving.",
     tags: ["Python", "Random Forest", "FastAPI", "Streamlit", "Docker", "REST API"],
-    github: "https://github.com/ghanendrasahu/customer_churn_project",
+    github: "https://github.com/ghanendrasahu/customer-churn-project",
     demo: "https://customer-churn-app-1jyq.onrender.com",
   },
   {
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     description:
       "FastAPI-based PDF RAG backend using ChromaDB embeddings and Groq-powered answer generation. Exposes dedicated ingest/query endpoints with structured logging for production observability — a deployable document-intelligence service rather than a script.",
     tags: ["Python", "FastAPI", "ChromaDB", "Embeddings", "Groq", "REST API"],
-    github: "https://github.com/ghanendrasahu/RAG_ASSISTANT_API",
+    github: "https://github.com/ghanendrasahu/rag-assistant-api",
   },
   {
     id: 5,

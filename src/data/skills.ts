@@ -1,5 +1,4 @@
 ﻿export type SkillColor = "blue" | "green" | "purple" | "orange";
-export type PillTone = SkillColor | "default";
 
 export interface SkillGroup {
   id: number;
@@ -88,28 +87,6 @@ export const skillGroups: SkillGroup[] = [
       "KPI Dashboards",
     ],
   },
-];
-
-export interface ExpertisePill {
-  label: string;
-  tone: PillTone;
-}
-
-export const coreExpertise: ExpertisePill[] = [
-  { label: "ML / Deep Learning", tone: "blue" },
-  { label: "Python", tone: "blue" },
-  { label: "FastAPI", tone: "blue" },
-  { label: "Docker", tone: "blue" },
-  { label: "RAG Pipelines", tone: "green" },
-  { label: "LLMs", tone: "green" },
-  { label: "LangChain", tone: "green" },
-  { label: "Agentic AI", tone: "green" },
-  { label: "CrewAI", tone: "purple" },
-  { label: "AutoGen", tone: "purple" },
-  { label: "NLP", tone: "purple" },
-  { label: "AWS", tone: "default" },
-  { label: "SQL", tone: "default" },
-  { label: "Power BI", tone: "default" },
 ];
 
 export default skillGroups;

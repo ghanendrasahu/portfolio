@@ -27,7 +27,7 @@ export default function Header() {
           <div>
             <h1 className="font-display text-xl font-bold tracking-tight sm:text-[22px]">{profile.fullName}</h1>
             <p className="mt-0.5 flex items-center gap-1.5 text-[13px] text-tsecondary">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-accent2" />
+              <span className="h-2 w-2 rounded-full bg-accent2" aria-hidden="true" />
               {profile.availability} · {profile.location}
             </p>
           </div>

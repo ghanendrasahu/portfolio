@@ -1,4 +1,5 @@
 import experiences from "../data/experience";
+import Card from "../components/ui/Card";
 
 export default function Experience() {
   return (
@@ -15,20 +16,12 @@ export default function Experience() {
 
             <div className="relative border-l-2 border-border pb-9 pl-6 last:pb-0">
               <span className="pulse-dot absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-accent ring-4 ring-bg" />
-              <div className="relative overflow-hidden rounded-xl border border-border bg-surface p-5">
-                <img
-                  src="/bg-experience.jpg"
-                  alt=""
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-bg/75" aria-hidden="true" />
-                <div className="relative">
+              <Card image="/bg-experience.jpg" imageOpacity="opacity-25" overlay="bg-bg/75" paddingClassName="p-5">
               <h3 className="font-display text-base font-semibold">{exp.role}</h3>
               <p className="mb-3 text-[13.5px] text-accent">
                 {[exp.company, exp.note, exp.location].filter(Boolean).join(" · ")}
               </p>
-              <ul className="flex list-none flex-col gap-2 p-0">
+              <ul className="flex max-w-[540px] list-none flex-col gap-2 p-0">
                 {exp.bullets.map((bullet) => (
                   <li
                     key={bullet.slice(0, 24)}
@@ -38,8 +31,7 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
-                </div>
-              </div>
+            </Card>
             </div>
           </li>
         ))}

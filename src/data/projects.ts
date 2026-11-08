@@ -4,7 +4,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  github: string;
+  github?: string;
   demo?: string;
 }
 
@@ -172,12 +172,10 @@ export const projects: Project[] = [
   {
     id: 18,
     emoji: "⚙️",
-    title: "Bankai OS",
+    title: "Bankai OS (private)",
     description:
       "Personal autonomous-agent platform: a Node/TypeScript monorepo pairing a server-side orchestrator with a web dashboard for launching and observing agent sessions.",
     tags: ["TypeScript", "Node.js", "Monorepo", "Agent Orchestrator"],
-    github: "https://github.com/ghanendrasahu/bankai-os",
-    demo: "https://bankai-os.onrender.com",
   },
   {
     id: 19,

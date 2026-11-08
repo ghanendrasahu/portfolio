@@ -24,15 +24,17 @@ export default function Projects() {
               ))}
             </div>
             <div className="flex flex-wrap gap-4">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 text-[13px] font-medium text-accent hover:underline"
-              >
-                <GitBranch size={14} />
-                View on GitHub →
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-[13px] font-medium text-accent hover:underline"
+                >
+                  <GitBranch size={14} />
+                  View on GitHub →
+                </a>
+              )}
               {project.demo && (
                 <a
                   href={project.demo}

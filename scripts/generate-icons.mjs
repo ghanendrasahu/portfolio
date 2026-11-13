@@ -24,6 +24,10 @@ const markInner = markFile
   .replace(/^[\s\S]*?<svg[^>]*>/, "")
   .replace(/<\/svg>\s*$/, "")
   .trim();
+// brand-mark.svg sets fill="none" on its <svg> root, and that attribute is lost
+// when only the children are embedded. Without this wrapper the path falls back
+// to a black fill and floods the G's counter.
+const mark = `<g fill="none">${markInner}</g>`;
 
 const shell = (body, css = "") => `<!doctype html>
 <html><head><meta charset="utf-8" />
@@ -41,7 +45,7 @@ const iconHtml = (size, { radius, pad = 0, bleed = false }) =>
       bleed ? "" : `border-radius:${radius}px;`
     }">
       <div style="width:${size * (1 - pad * 2)}px;height:${size * (1 - pad * 2)}px">
-        <svg viewBox="0 0 64 64" fill="none">${markInner}</svg>
+        <svg viewBox="0 0 64 64" fill="none">${mark}</svg>
       </div>
     </div>`
   );
@@ -50,7 +54,7 @@ const ogHtml = async () => {
   const font = await readFile(path.join(publicDir, "fonts/ibm-plex-sans-latin-wght-normal.woff2"));
   return shell(
     `<div class="card">
-      <div class="badge"><svg viewBox="0 0 64 64" fill="none">${markInner}</svg></div>
+      <div class="badge"><svg viewBox="0 0 64 64" fill="none">${mark}</svg></div>
       <div class="copy">
         <h1>Ghanendra Sahu</h1>
         <p class="role">Data Scientist &amp; GenAI Engineer</p>
@@ -85,7 +89,7 @@ const targets = [
 // written from the same string so the two can never drift apart.
 const logoSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="${ACCENT}"/>
-  ${markInner}
+  ${mark}
 </svg>
 `;
 

@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import projects from "../src/data/projects";
 
 const routes = ["/", "/experience", "/projects", "/skills", "/github", "/education"];
 
@@ -35,16 +36,21 @@ test.describe("portfolio smoke", () => {
     }
   });
 
-  test("projects page renders every card with a GitHub link", async ({ page }) => {
+  test("projects page renders a card per project and a link per public repo", async ({ page }) => {
     await page.goto("/projects");
     const cards = page.locator("article");
     await expect(cards.first()).toBeVisible();
 
-    const total = await cards.count();
-    expect(total).toBeGreaterThanOrEqual(20);
+    await expect(cards).toHaveCount(projects.length);
+    expect(projects.length).toBeGreaterThanOrEqual(20);
 
-    const githubLinks = cards.locator('a[href^="https://github.com/"]');
-    expect(await githubLinks.count()).toBe(total);
+    // Repo links are optional (private projects have none), so compare the
+    // rendered set against the data rather than assuming one link per card.
+    const expected = projects.flatMap((p) => (p.github ? [p.github] : [])).sort();
+    const rendered = await cards
+      .locator('a[href^="https://github.com/"]')
+      .evaluateAll((links) => links.map((link) => (link as HTMLAnchorElement).href).sort());
+    expect(rendered).toEqual(expected);
   });
 
   test("home shows headline, CTAs and resume link", async ({ page }) => {

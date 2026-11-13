@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#8B93FF"/>
-  <text x="32" y="42" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#0B0D12">GS</text>
+  <rect width="64" height="64" rx="14" fill="#8b93ff"/>
+  <path
+    d="M41.75 15.11A19.5 19.5 0 1 0 51.5 32H36"
+    stroke="#0b0d12"
+    stroke-width="9"
+  />
 </svg>

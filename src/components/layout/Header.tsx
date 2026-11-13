@@ -18,36 +18,36 @@ export default function Header() {
       <div className="mx-auto max-w-[1000px] px-5 pt-6 sm:px-7 sm:pt-7">
         <div className="mb-4 flex items-center gap-4 sm:mb-5">
           <img
-            src="/images/avatar-128.jpg"
-            alt="Ghanendra Sahu"
-            width={52}
-            height={52}
-            className="h-[52px] w-[52px] shrink-0 rounded-full border border-border object-cover"
+            src="/brand-mark.svg"
+            alt=""
+            width={44}
+            height={44}
+            className="h-11 w-11 shrink-0 rounded-[10px] bg-accent sm:h-[52px] sm:w-[52px] sm:rounded-xl"
           />
           <div>
             <h1 className="font-display text-xl font-bold tracking-tight sm:text-[22px]">{profile.fullName}</h1>
-            <p className="mt-0.5 flex items-center gap-1.5 text-[13px] text-tsecondary">
-              <span className="h-2 w-2 rounded-full bg-accent2" aria-hidden="true" />
+            <p className="mt-0.5 flex items-start gap-1.5 text-[13px] text-tsecondary">
+              <span className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-accent2" aria-hidden="true" />
               {profile.availability} · {profile.location}
             </p>
           </div>
         </div>
 
-        <nav className="-mb-px flex flex-wrap gap-x-0.5 sm:flex-nowrap">
+        <nav className="-mb-px grid grid-cols-3 sm:flex sm:flex-nowrap">
           {tabs.map((tab) => (
             <NavLink
               key={tab.to}
               to={tab.to}
               end={tab.end}
               className={({ isActive }) =>
-                `flex items-center whitespace-nowrap border-b-2 px-3 py-2.5 text-[13.5px] font-medium transition-colors sm:px-[18px] ${
+                `flex items-center justify-center whitespace-nowrap border-b-2 px-1 py-2.5 text-[13px] font-medium transition-colors sm:justify-start sm:px-[18px] sm:text-[13.5px] ${
                   isActive
                     ? "border-accent text-accent"
                     : "border-transparent text-tsecondary hover:text-tprimary"
                 }`
               }
             >
-              <tab.Icon size={14} strokeWidth={2} className="mr-1.5 shrink-0" aria-hidden="true" />
+              <tab.Icon size={14} strokeWidth={2} className="mr-1 shrink-0 sm:mr-1.5" aria-hidden="true" />
               {tab.name}
             </NavLink>
           ))}

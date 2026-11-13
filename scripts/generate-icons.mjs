@@ -12,11 +12,12 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = path.join(root, "public");
 
-const ACCENT = "#8b93ff";
+const ACCENT = "#15243b";
 const INK = "#0b0d12";
 const TEXT = "#e8ebf5";
 const MUTED = "#9aa4b8";
 const MINT = "#46d39a";
+const HAIRLINE = "#2a3a52";
 
 const markFile = await readFile(path.join(publicDir, "brand-mark.svg"), "utf8");
 const markInner = markFile
@@ -63,7 +64,7 @@ const ogHtml = async () => {
      }
      body { background: ${INK}; color: ${TEXT}; font-family: "IBM Plex Sans", "Segoe UI", sans-serif; }
      .card { width: 1200px; height: 630px; display: flex; align-items: center; gap: 64px; padding: 0 104px; }
-     .badge { width: 232px; height: 232px; flex: none; background: ${ACCENT}; border-radius: 48px; padding: 30px; }
+     .badge { width: 232px; height: 232px; flex: none; background: ${ACCENT}; border: 1px solid ${HAIRLINE}; border-radius: 48px; padding: 30px; }
      h1 { font-size: 92px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
      .role { margin-top: 22px; font-size: 38px; font-weight: 500; color: ${MUTED}; letter-spacing: -0.01em; }
      .url { margin-top: 40px; font-size: 24px; font-weight: 500; color: ${MUTED}; display: flex; align-items: center; gap: 12px; }
@@ -80,12 +81,17 @@ const targets = [
   { file: "favicon-32.png", size: 32, opts: { radius: 7 } },
 ];
 
-const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+// The tiled logo is what the header renders and what the browser tab uses,
+// written from the same string so the two can never drift apart.
+const logoSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="${ACCENT}"/>
   ${markInner}
 </svg>
 `;
-await writeFile(path.join(publicDir, "favicon.svg"), favicon, "utf8");
+
+for (const name of ["brand-logo.svg", "favicon.svg"]) {
+  await writeFile(path.join(publicDir, name), logoSvg, "utf8");
+}
 
 const browser = await chromium
   .launch()
@@ -112,4 +118,4 @@ await page.screenshot({
 console.log("og-image.png  1200x630");
 
 await browser.close();
-console.log("favicon.svg written from brand-mark.svg");
+console.log("brand-logo.svg + favicon.svg written from brand-mark.svg");

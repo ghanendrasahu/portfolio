@@ -18,11 +18,11 @@ export default function Header() {
       <div className="mx-auto max-w-[1000px] px-5 pt-6 sm:px-7 sm:pt-7">
         <div className="mb-4 flex items-center gap-4 sm:mb-5">
           <img
-            src="/brand-mark.svg"
+            src="/brand-logo.svg"
             alt=""
             width={44}
             height={44}
-            className="h-11 w-11 shrink-0 rounded-[10px] bg-accent sm:h-[52px] sm:w-[52px] sm:rounded-xl"
+            className="h-11 w-11 shrink-0 sm:h-[52px] sm:w-[52px]"
           />
           <div>
             <h1 className="font-display text-xl font-bold tracking-tight sm:text-[22px]">{profile.fullName}</h1>
